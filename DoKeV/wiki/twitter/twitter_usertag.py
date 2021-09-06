@@ -31,7 +31,12 @@ def getTweetusertag(usertag):
     cursor = ''
 
     for i in range(100):
+         
+
         try:
+            print("")
+            print(i)
+            print("")
                
             variables = {
                 "userId":rest_id
