@@ -59,31 +59,30 @@ def getTweetusertag(usertag):
 
             tweet_content = tweet_data['data']['user']['result']['timeline']['timeline']['instructions'][0]['entries']
             for tweet in tweet_content:
-                if tweet['content']['itemContent'] == True:
+                try:
                     fulltext=tweet['content']['itemContent']['tweet_results']['result']['legacy']['full_text']
-                    print(fulltext+'\n')
-                    
+                    print(fulltext + '\n')
                     with open(f'twitter_{usertag}.csv', "a", encoding='utf-8') as f:
-                        f.write(f'{i+1} 번 째 트윗'+'\n'+fulltext+'\n')
-                else:
-                    tweet_thread = tweet['content']['items']
-                    for tweet in tweet_thread:
-                        fulltext=tweet['item']['itemContent']['tweet_results']['result']['legacy']['full_text']
-                        print(fulltext+'\n')
-                    
-                    with open(f'twitter_{usertag}.csv', "a", encoding='utf-8') as f:
-                        f.write(f'{i+1} 번 째 트윗'+'\n'+fulltext+'\n')
-                
+                        f.write(f'{i+1} 번 째 단독 트윗'+'\n'+fulltext+'\n')
+
+                except:
+                    pass
             
-        
+            for tweet in tweet_content:
+                try:
+                    for item in tweet['content']['items']:
+                        fulltext=item['item']['itemContent']['tweet_results']['result']['legacy']['full_text']
+                        print(fulltext + '\n')
+                        with open(f'twitter_{usertag}.csv', "a", encoding='utf-8') as f:
+                            f.write(f'{i+1} 번 째 연속 트윗'+'\n'+fulltext+'\n')
+                except:
+                    pass
 
-        # # 커서 가져오기
-
-        # #맨 마지막에  커서 바텀이 있는지 확인하는 처리 필요
+            
 
             cursor = tweet_data['data']['user']['result']['timeline']['timeline']['instructions'][0]['entries'][-1]['content']['value']
             
-            time.sleep(5)
+            time.sleep(1)
 
         except:
             break
