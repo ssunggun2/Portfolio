@@ -588,8 +588,8 @@ plt.xlabel("Train Step")
 
 """
 
-from google.colab import drive
-drive.mount('/content/drive')
+# from google.colab import drive
+# drive.mount('/content/drive')
 
 # https://github.com/suyash/transformer
 import tensorflow as tf
@@ -1072,7 +1072,7 @@ Original file is located at
     https://colab.research.google.com/drive/1pnSh26gOExNccGZRzN7MkS1i0DPrElt3
 """
 
-!pip install sentencepiece
+# !pip install sentencepiece
 
 # Commented out IPython magic to ensure Python compatibility.
 # Transformer ChatBot : 채팅 모듈
