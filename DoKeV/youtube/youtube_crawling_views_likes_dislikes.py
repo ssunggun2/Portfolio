@@ -72,7 +72,7 @@ def playlists(query):
     # print(df)
     return df
     
-# print(playlists('aespa'))
+print(playlists('DokeV'))
 
 
 
@@ -103,7 +103,7 @@ def getvideolist(query):
         
         return vdf
 
-# print(getvideolist('aespa'))
+print(getvideolist('DokeV'))
 
         
 
@@ -158,4 +158,4 @@ def getstatistics(query):
     print(statistics_df)
     return statistics_df
 
-getstatistics('aespa')
+getstatistics('DokeV')
