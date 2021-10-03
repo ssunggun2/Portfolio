@@ -10,6 +10,7 @@ Original file is located at
 """# 언어별 분류 작업
 - 정확도가 높은 fasttext 모듈로 분류
 """
+
 !pip install fasttext
 import copy
 import fasttext
