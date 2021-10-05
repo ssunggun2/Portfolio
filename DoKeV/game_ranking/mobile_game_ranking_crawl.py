@@ -57,37 +57,4 @@ for i in range(200):
 
     df=pd.DataFrame({'Ranking': rank_list ,'title': title_list, 'apple_rank': apple_list, 'google_rank': google_list})
 print(df)
-df.to_csv(f'C:/Users/User/Desktop/workspace/Portfolio/DoKeV/game_ranking/{date}_game_ranking.csv', index=False)
-
-
-# for k in range(100):
-        
-#     #타이틀
-#     title = data['data']['trackList'][k]['name']
-#     # print(title)
-    
-#     #가수
-#     artist_list =[]
-#     for i in range(len(data['data']['trackList'][k]['artistList'])):
-#         artist = data['data']['trackList'][k]['artistList'][i]['name']
-#         artist_list.append(artist)
-#     # print(artist_list)
-
-#     #앨범
-#     album = data['data']['trackList'][k]['album']['title']
-#     # print(album)
-
-#     #앨범  이미지
-#     img = data['data']['trackList'][k]['album']['imgList'][5]['url']
-#     # print(img)
-
-#     title_list.append(title)
-#     artist_list2.append(artist_list)
-#     album_list.append(album)
-#     img_list.append(img)
-    
-
-#     df=pd.DataFrame({'Ranking': k+1 ,'title': title_list, 'artist': artist_list2, 'album': album_list, 'img':img_list})
-#     print(df)
-#     df.to_csv('Flo100.csv')
-
+df.to_csv(f'C:/Users/User/Desktop/workspace/Portfolio/DoKeV/game_ranking/{date}_mobile_game_ranking.csv', index=False)
