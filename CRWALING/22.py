@@ -10,8 +10,8 @@ import pandas as pd
 start=time.time()
 
 name=pd.read_csv('C:/Users/User/Desktop/workspace/mulcam_army/blip_artists_list.csv')
-name=name[::-1]
-name=name[9:]
+# name=name[::-1]
+# name=name[11:]
 
 for i in name.artist_eng:
     artist=i
