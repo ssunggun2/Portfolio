@@ -264,3 +264,17 @@ print(corpus[1]) # 수행된 결과에서 두번째 뉴스 출력. 첫번째 문
 
 print(dictionary[12])
 
+len(dictionary)
+
+NUM_TOPICS = 5 #5개의 토픽, k=5
+ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics = NUM_TOPICS, id2word=dictionary, passes=15)
+topics = ldamodel.print_topics(num_words=10)
+for topic in topics:
+    print(topic)
+
+pyLDAvis.enable_notebook()
+vis2 = pyLDAvis.gensim_models.prepare(ldamodel, corpus, dictionary)
+pyLDAvis.display(vis2)
+
+pyLDAvis.save_html(vis2, path2+comment_file+'lda_dic_ko.html')
+
