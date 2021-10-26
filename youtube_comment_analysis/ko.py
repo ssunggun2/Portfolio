@@ -326,3 +326,4 @@ topic_term_prob = get_topic_term_prob(ldamodel)
 print(topic_term_prob.shape)     # (n_topics, n_terms)
 print(topic_term_prob[0].sum())  # 1.0
 
+
