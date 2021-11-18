@@ -7,5 +7,10 @@
 2. Dacon 농산물 가격 예측 공모전 
  - 가격예측 모델로 사용 가능한 ARIMA 모델 연습
  - 시계열 데이터 분석
+ - XGB + LSTM
 
-3.
+3. 가스・에너지분야 문서요약 모델개발
+ - BERTSUM
+ - KOBERT
+ - KOBART
+ - KTRAIN
