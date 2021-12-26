@@ -30,3 +30,4 @@
 
 7.
 https://stellarway.tistory.com/29
+https://pythonawesome.com/a-pytorch-implementation-of-korean-ner-tagger-based-on-bert-crf/
